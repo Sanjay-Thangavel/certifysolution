@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="certifysolution.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+     <%--Our custom css--%>
+    <link href="css/ourstylesheet.css" rel="stylesheet" />
+
+
+
+    <%--jquery js--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <%--Datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+                                                                    
+                                                                   <%--place holder 1--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style4 {
+            width: 64px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg nabar-light bg-light" style="background-color: #e3f2fd;" >
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/sakthi_logo.png" / width="60" height="60">
+                    <b>SACL CERTIFICATE    </b> 
+                </a>
+                &nbsp;&nbsp;
+                <a class="btn btn-outline-primary" href="homepage.aspx" id="homeid">Home</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <button class="auto-style4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-image: url('/imgs/mytoggle.png'); background-repeat: no-repeat; background-position: center">
+                  <span class="fa-amazon" id="togller"></span>    
+                </button>
+
+                 &nbsp;&nbsp;
+ 
+
+
+              <%--  &nbsp;&nbsp;
+                 <a class="btn btn-primary" href="homepage.aspx" id="homeid">Home</a>
+                 
+                 &nbsp;&nbsp;
+                <asp:Button ID="Button2" class="btn btn-primary" runat="server" Text="sign up" OnClick="Button2_Click"  />
+                 &nbsp;&nbsp;
+                <asp:Button ID="Button3" class="btn btn-primary" runat="server" Text="Login " OnClick="Button3_Click"  />
+                 &nbsp;&nbsp;
+                <asp:Button ID="Button4" class="btn btn-primary" runat="server" Text="Admin View" OnClick="Button4_Click"  />
+                --%>
+
+                <%--  
+                 <a class="btn btn-primary" href="usersignuppage.aspx" hidden=null id="signupid">Sign Up</a>
+                 &nbsp;&nbsp;
+                 <a class="btn btn-primary" href="userlogin.aspx" id="loginid">User Login</a>
+                 &nbsp;&nbsp;
+                 <a class="btn btn-primary" href="adminlogin.aspx" id="adminid">Admin View</a>
+               
+--%>
+                 <%--Left--%>
+                
+                
+
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        &nbsp;&nbsp;
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-primary" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        &nbsp;&nbsp;
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-primary"  ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+                        </li>
+                        
+
+                        &nbsp;&nbsp;
+                        <li class="nav-item active">
+                            <asp:LinkButton  class="btn btn-primary"  ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Admin View</asp:LinkButton>
+                        </li>
+
+                        <%--
+                        &nbsp;&nbsp;
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-primary"  ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">User Login</asp:LinkButton>
+                        </li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-primary" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Terms</a>
+                        </li>
+--%>
+
+                    </ul>
+                    <%--Right--%>
+                    <ul class="navbar-nav">
+
+                        <asp:Label ID="Label1" runat="server" Text="Click here to Log Out -->" ForeColor="#FF6600" Visible="False"></asp:Label>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-warning" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False">Hello user</asp:LinkButton>
+
+                        </li>
+                       
+                    </ul>
+                </div> 
+     
+            </nav>
+
+        </div>
+                   <hr style="height:2px;border-width:0;color:gray;background-color:#65AEF0">
+         <!-- Main Content Placeholder -->                                                                <%--place holder 2--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+        <!-- Footer -->
+        <footer>
+
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p> &copy All right Reversed.Sakthi</p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- ./Footer -->
+
+    </form>
+</body>
+</html>
